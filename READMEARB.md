@@ -32,7 +32,7 @@ pip install requests
 استخدم الرابط التالي في سكربتك:
 
 ```python
-CLOUD_API = "[https://supertutelary-soberly-ezra.ngrok-free.dev](https://supertutelary-soberly-ezra.ngrok-free.dev)"
+CLOUD_API = "https://supertutelary-soberly-ezra.ngrok-free.dev"
 API_KEY = "CLOUDEZONE:512523524952740985RHIEWHRK3HK423O23IIO23U325"
 username = "ضع اسم المستخدم هنا"
 password = "ضع كلمة المرور هنا"
