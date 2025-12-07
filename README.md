@@ -1,6 +1,6 @@
 ---
 
-# 🌩️ ZONE | Cloud 
+# 🌩️ ZONE | Cloud — Integration Guide (User-Based Edition)
 
 **Developer Rights:** @IEI_T
 **Purpose:** Connect your existing Python script or Telegram bot to the ready-to-use ZONE | Cloud with per-user authentication.
