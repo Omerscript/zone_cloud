@@ -1,6 +1,10 @@
 # 🌩️ ZONE | Cloud
 This was created with developer rights: @IEI_T  It was created for unlimited storage space.  And you can save and retrieve files from Cloud Zone for free..
 
+# ملاحظه:
+اذا ما فهمت شي حول الشرح لاي ذكاء اصطناعي وراح يفهمك ويربط كود حقك بل سحابه ( cloud )
+
+
 ---
 
 ## 🔎 Project summary
