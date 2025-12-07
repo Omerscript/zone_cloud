@@ -4,6 +4,10 @@ This was created with developer rights: @IEI_T  It was created for unlimited sto
 # ملاحظه:
 اذا ما فهمت شي حول الشرح لاي ذكاء اصطناعي وراح يفهمك ويربط كود حقك بل سحابه ( cloud )
 
+# Note: 
+
+If you don't understand anything in the explanation, contact an artificial intelligence system, and it will understand you and connect your code to the cloud.
+
 
 ---
 
