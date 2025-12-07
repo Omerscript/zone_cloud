@@ -81,9 +81,8 @@ API_KEY = "supersecret123"
 * Multiple scripts/bots can share the same cloud files.
 * Simple integration using only `requests`.
 
----
 
-**Note:** This guide assumes you already have a Telegram bot or a Python script.
-The cloud is ready-to-use; you only connect your existing script to it.
 
-```
+DEV : ZONE
+
+TELEGRAM USERNAME : @IEI_T
