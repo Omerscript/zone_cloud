@@ -1,19 +1,19 @@
+---
 
-# 🌩️ ZONE | Cloud — Integration Guide
+# 🌩️ ZONE | Cloud 
 
-**Developer Rights:** @IEI_T  
-**Purpose:** Connect your existing Python script or Telegram bot to the ready-to-use ZONE | Cloud.
+**Developer Rights:** @IEI_T
+**Purpose:** Connect your existing Python script or Telegram bot to the ready-to-use ZONE | Cloud with per-user authentication.
 
 **Cloud URL:**
-If an error occurs, it may have changed. Please contact the developer.
+
+```text
+https://supertutelary-soberly-ezra.ngrok-free.dev
 ```
 
-[https://supertutelary-soberly-ezra.ngrok-free.dev](https://supertutelary-soberly-ezra.ngrok-free.dev)
-
-````
-
-> This cloud is already running. You do **not** need to create a bot or a server.  
+> This cloud is already running. You do **not** need to create a bot or a server.
 > You only connect your existing bot/script to store and retrieve files.
+> Each user can upload files with a username and password, keeping their files private from others.
 
 ---
 
@@ -23,9 +23,9 @@ To link your script or bot to the cloud:
 
 ```bash
 pip install requests
-````
+```
 
-> Only `requests` is required. No need for FastAPI, Uvicorn, or ngrok.
+> Only `requests` is required.
 
 ---
 
@@ -35,16 +35,18 @@ Use the following URL in your script:
 
 ```python
 CLOUD_API = "https://supertutelary-soberly-ezra.ngrok-free.dev"
-API_KEY = "supersecret123"
+API_KEY = "CLOUDEZONE:512523524952740985RHIEWHRK3HK423O23IIO23U325"
+username = "your username here"
+password = "your password here"
 ```
 
-| Endpoint               | Method | Description           |
-| ---------------------- | ------ | --------------------- |
-| `/upload`              | POST   | Upload a file         |
-| `/download/{filename}` | GET    | Download a file       |
-| `/list`                | GET    | List all stored files |
-| `/delete/{filename}`   | DELETE | Delete a file         |
-| `/status`              | GET    | Check cloud status    |
+| Endpoint    | Method | Description                                           |
+| ----------- | ------ | ----------------------------------------------------- |
+| `/upload`   | POST   | Upload a file **with username & password**            |
+| `/download` | GET    | Download a file **by specifying username & password** |
+| `/list`     | GET    | List all files for a **specific user**                |
+| `/delete`   | DELETE | Delete a file for a **specific user**                 |
+| `/status`   | GET    | Check cloud status                                    |
 
 ---
 
@@ -56,19 +58,42 @@ API_KEY = "supersecret123"
 2. **Set Cloud URL and API Key**
    Assign the cloud URL and API key as variables in your script.
 
-3. **Upload Files to Cloud**
-   Use a POST request to `/upload` with your API key and the file you want to store.
+3. **Authenticate Your User**
+   Each user must provide a `username` and `password` for every request.
+   Files are stored per-user, so users cannot access others’ files.
 
-4. **Download Files from Cloud**
-   Use a GET request to `/download/{filename}` with your API key to fetch files.
+4. **Upload Files to Cloud**
+   Use a POST request to `/upload` with:
 
-5. **List Stored Files**
-   Use a GET request to `/list` with your API key to see all files currently in the cloud.
+   * `username`
+   * `password`
+   * `key` (API_KEY)
+   * `file`
 
-6. **Delete Files**
-   Use a DELETE request to `/delete/{filename}` with your API key to remove a file.
+5. **Download Files from Cloud**
+   Use a GET request to `/download` with:
 
-7. **Optional Health Check**
+   * `filename`
+   * `username`
+   * `password`
+   * `key` (API_KEY)
+
+6. **List Stored Files for a User**
+   Use a GET request to `/list` with:
+
+   * `username`
+   * `password`
+   * `key` (API_KEY)
+
+7. **Delete Files**
+   Use a DELETE request to `/delete` with:
+
+   * `filename`
+   * `username`
+   * `password`
+   * `key` (API_KEY)
+
+8. **Optional Health Check**
    Use a GET request to `/status` to check if the cloud is online.
 
 ---
@@ -76,13 +101,15 @@ API_KEY = "supersecret123"
 ## ⚡ Benefits of Connecting Your Bot/Script
 
 * Works instantly with your existing Telegram bot or Python script.
+* Each user has **private file storage** with username & password.
 * No need to host your own server.
 * Unlimited file storage.
-* Multiple scripts/bots can share the same cloud files.
+* Multiple users can upload same file names safely (no collisions).
 * Simple integration using only `requests`.
 
+---
 
+**DEV:** ZONE
+**TELEGRAM USERNAME:** @IEI_T
 
-DEV : ZONE
-
-TELEGRAM USERNAME : @IEI_T
+---
