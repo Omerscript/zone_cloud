@@ -1,5 +1,3 @@
----
-
 # 🌩️ ZONE | Cloud — Integration Guide (User-Based Edition)
 
 **Developer Rights:** @IEI_T
